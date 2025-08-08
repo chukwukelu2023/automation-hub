@@ -11,8 +11,7 @@ jobs:
     runs-on: ubuntu-latest 
     name: Test changed-files
     outputs:
-        # modified-files: ${{ steps.changed-files.outputs.all_changed_files }}
-         modified-files: ${{ steps.list-changed-files.outputs.files }}
+        modified-files: ${{ steps.changed-files.outputs.all_changed_files }}
     steps:
       - uses: actions/checkout@v4
         with:
